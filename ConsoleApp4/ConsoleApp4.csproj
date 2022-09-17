@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Svg" Version="3.4.3" />
+    <None Remove="RectangleFormat.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="RectangleFormat.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

@@ -43,7 +43,7 @@ namespace ConsoleApp4
         public void Pack(float containerWidth, float containerHeight)
         {
             //boxes = boxes.OrderByDescending(x => x.area).ToList();
-            boxes = boxes.OrderBy(x => x.area).ToList();
+            boxes = boxes.OrderByDescending(x => x.area).ToList();
             rootNode = new Node { w = containerWidth, h = containerHeight };
 
             foreach (var box in boxes)
@@ -51,8 +51,6 @@ namespace ConsoleApp4
                 var node = FindNode(rootNode, box.width, box.height);
                 if (node != null)
                 {
-
-
                     if (node.rotated)
                     {
                         float tmp = 0;
